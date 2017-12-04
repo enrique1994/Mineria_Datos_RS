@@ -19,3 +19,8 @@ En la linea 17 se usa un for ya que se extraeran de la base de datos del twitter
 
 Lineas posteriores de estas mencionadas al momento de descargar los tweets se utiliza una funcion:tweet.text.encode('utf-8') la cual nos permite codificar el tipo de texto para que pueda python poderlo manejar como cadena.
 
+4.-Por ultimo se utilizara un algoritmo para quitar los acentos ya que para PLN en algunos puntos el acento nos puede ocasionar problemas por lo cual se tomo la decision de cambiar las letras con acentos, con letras sin acentos, de ahi procedemos a etiquetar los tweets a traves de un algoritmo automatico de etiquetado el cual nos permitira determinar si es una noticia u opinion todo dependiendo del diccionario anteriormente creado.
+
+5.-En el mismo programa de python del paso 4 se procede a entrenar el clasificador bayesiano con el archivo training_NombreTema.
+
+6.-En el mismo programa se evalua el algoritmo con el clasificador bayesiano de la biblioteca de Pattern pero con la diferencia de que se llama test_NombreTema, con el numero de palabras implementadas en el algoritmo mencionado en el paso 2 nos arroja en las pruebas un indice del 80% acertados.
